@@ -1,0 +1,28 @@
+<script type ="text/javascript">
+  var token = '<%= @token %>';
+  var name = '<%= @name %>';
+  var moderator_env_name = '<%= @moderator_name %>';
+
+  // reload page to render with variables
+  (function() {
+    if(window.localStorage) {
+      if(!localStorage.getItem('firstLoad')) {
+        localStorage['firstLoad'] = true;
+        window.location.reload();
+    } else
+      localStorage.removeItem('firstLoad');
+    }
+  })();
+</script>
+
+
+
+<main class="app">
+  <div class="videos">
+    <div class="publisher" id="publisher"></div>
+    <div class="subscriber" id="subscribers"></div> 
+  </div>
+
+
+</main>
+
